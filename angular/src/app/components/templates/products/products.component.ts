@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/interface/interface';
-import Api from './service/product.service.faker';
+import Api from './service/products.service.faker';
 
 @Component({
   selector: 'app-products',
