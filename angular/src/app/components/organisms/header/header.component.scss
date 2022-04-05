@@ -1,0 +1,31 @@
+@import "src/styles";
+.header {
+  // background: $background;
+  box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
+  &__menu__item {
+    &:not(.active) {
+      a.nav-link::before{
+        width: 0;
+      }
+    }
+    &.active a.nav-link{
+      position: relative;
+      // color: $light-color;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0px;
+        // color: $primary-color;
+        // background: $primary-color;
+        height: 1px;
+        width: 100%;
+        transition: 0.3s;
+      }
+      &:hover{
+        // color: $primary-color;
+      }
+    }
+  }
+}
+

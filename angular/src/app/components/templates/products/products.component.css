@@ -1,0 +1,12 @@
+.card {
+    height: 100%;
+}
+
+div.cta{
+    padding: 20px;
+}
+
+button {
+    margin: 0 12px;
+    min-width: 75px;
+}
