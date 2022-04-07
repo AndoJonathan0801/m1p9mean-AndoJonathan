@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import { Product } from 'src/app/interface/interface';
+import { Offer, Product } from 'src/app/interface/interface';
 import Api from './service/product.service.faker';
 
 @Component({
@@ -10,6 +10,7 @@ import Api from './service/product.service.faker';
 })
 export class ProductComponent implements OnInit {
   product = {} as Product; 
+  offers = [] as Offer[];
 
   constructor(private route: ActivatedRoute) {
   }
@@ -17,6 +18,11 @@ export class ProductComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('id'));
     this.product = Api.getProduct(productIdFromRoute);
+    this.offers = Api.getOffers(productIdFromRoute);
+  }
+
+  addToCart() {
+    
   }
 
 }

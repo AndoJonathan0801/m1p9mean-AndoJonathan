@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/organisms/header/header.component'
 import { ProductComponent } from './components/templates/product/product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { CheckoutComponent } from './components/templates/checkout/checkout.component';
+import { CartComponent } from './components/molecules/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -17,15 +19,18 @@ import { MatCardModule } from '@angular/material/card';
     ProductsComponent,
     LoginComponent,
     HeaderComponent,
-    ProductComponent
+    ProductComponent,
+    CheckoutComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: 'products', component: ProductsComponent},
+      {path: '', component: ProductsComponent},
       {path: 'login', component: LoginComponent},
-      {path: '', redirectTo: '/products', pathMatch: 'full'},
       {path: 'product/:id', component: ProductComponent},
+      {path: 'checkout', component: CheckoutComponent},
+
       {path: '**', component: NotfoundComponent}
     ]),
     BrowserAnimationsModule,
