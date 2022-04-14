@@ -1,6 +1,6 @@
 export interface Product {
     id_product: number;
-    id_restaurant: number; 
+    id_restaurant: number;
     name: string;
     details: string;
     img?: string;
@@ -19,7 +19,7 @@ export interface Command{
     id_cart: number;
     id_client: number;
     delivery_address: Address;
-    state: State; 
+    state: State;
     id_deliverer?:number;
 }
 
@@ -44,6 +44,7 @@ export interface Cart {
 export interface CartItems {
     id_product: number;
     quantity?: number;
+    id_offer: number;
 }
 
 export interface Restaurant {
